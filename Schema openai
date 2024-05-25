@@ -1,0 +1,49 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Envio de datos a airtable",
+    "description": "Toma los datos nombre y numero y almacenalos en un webhook",
+    "version": "v1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://hook.us1.make.com"
+    }
+  ],
+  "paths": {
+    "/o8nlgesmd3h41td4vf6otrq15sbla5om": {
+      "post": {
+        "description": "Almacenar informacion",
+        "operationId": "Envio de datos a airtable",
+        "parameters": [],
+        "deprecated": false,
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "Nombre": {
+                    "type": "string",
+                    "description": "guardar el dato de nombre"
+                  },
+                  "Numero": {
+                    "type": "string",
+                    "description": "guardar el dato de numero"
+                  }
+                },
+                "required": [
+                  "Nombre",
+                  "Numero"
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {}
+  }
+}
